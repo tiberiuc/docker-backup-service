@@ -43,7 +43,7 @@ Configuration is done by sending environmental variables to the container
 |ROTATE_BACKUPS| | "-hourly=24 --daily=60 --weekly=16 --yearl=always" see [rotate-backups](https://github.com/xolox/python-rotate-backups)|
 |REMOTE_BACKUP_PATH| |/backup-bucket/backup |
 |BACKUP_INTERVAL | | "0 \* \* \* \*" |
-|SERVICES_BACKUP_LIST| |  "webapp=http://webapp:9191  database=http://database:9191" |
+|SERVICES_BACKUP_LIST| | Space separated list of values in format <backup_name>=<backup_agent_url> ex: `"webapp=http://webapp:9191  database=http://database:9191"` |
 
 
 ## Manual backup
