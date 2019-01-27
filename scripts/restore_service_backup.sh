@@ -17,7 +17,7 @@ url=${SERVICES[$SERVICE_NAME]}
 
 if [ ! -z $url ]; then
   echo "Restoring ${SERVICE_NAME} from ${BACKUP_FILE}"
-  curl -v   ${url}/restore --data-binary @${BACKUP_FILE}
+  curl -v   ${url%%/}/restore --data-binary @${BACKUP_FILE}
 else
   echo "Service '${SERVICE_NAME}' not found. Please check SERVICES_BACKUP_LIST env variable."
 fi

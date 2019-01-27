@@ -11,5 +11,5 @@ BACKUP_FILE_NAME=$BACKUP_FOLDER/$name.tgz
 
 echo "Getting backup $name -> $url into $BACKUP_FILE_NAME"
 
-curl $url/backup -o $BACKUP_FILE_NAME
+curl ${url%%/}/backup -o $BACKUP_FILE_NAME
 
