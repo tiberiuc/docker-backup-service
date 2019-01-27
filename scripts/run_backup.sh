@@ -23,7 +23,7 @@ BACKUP_FILE_NAME="backup_${BACKUP_DATE}.tgz"
 # create backup file
 mkdir -p ${LOCAL_BACKUP_FOLDER}
 cd ${TMP_BACKUP_FOLDER}
-tar -czf $BACKUP_FILE_NAME ./
+tar -czf $BACKUP_FILE_NAME --exclude=${BACKUP_FILE_NAME} ./
 
 # send backup in the backup folder
 mv ${TMP_BACKUP_FOLDER}/${BACKUP_FILE_NAME} ${LOCAL_BACKUP_FOLDER}/
